@@ -16,7 +16,7 @@ Usage:
 3) Script will produce a SQLite database named mib.db.
 4) Script will produce two directories named Apps_Historical and Apps_State.
 Apps_Historical contains text files per app with coresponding app entries.  
-App_State contained two text files, one for installed apps and another for uninstalled apps.
+App_State contains two text files, one for installed apps and another for uninstalled apps.
 
 In order to run the script again the script generated directories and SQLite db file need  
 to be deleted or moved out of the running directory.  
