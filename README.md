@@ -14,9 +14,6 @@ Usage:
 1) Put the script in the same directory as the extracted mobile_installation.log.* files.
 2) Run the script.  
 3) Script will produce a SQLite database named mib.db.
-4) Script will produce two directories named Apps_Historical and Apps_State.
-Apps_Historical contains text files per app with coresponding app entries.  
-App_State contains two text files, one for installed apps and another for uninstalled apps.
+4) Script will produce two directories named Apps_Historical and Apps_State. Apps_Historical contains text files per app with coresponding app entries. App_State contains two text files, one for installed apps and another for uninstalled apps.
 
-In order to run the script again the script generated directories and SQLite db file need  
-to be deleted or moved out of the running directory.  
+In order to run the script again the script generated directories and SQLite db files need to be deleted or moved out of the running directory.  
