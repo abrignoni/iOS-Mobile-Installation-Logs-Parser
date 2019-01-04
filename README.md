@@ -1,6 +1,6 @@
 # iOS-Mobile-Installation-Logs-Parser 
 
-
+![alt text](/images/mib_done.PNG "Usage example")
 
 Script parses all the logs in the /private/var/installd/Library/Logs/MobileInstalation/*.log*
 
