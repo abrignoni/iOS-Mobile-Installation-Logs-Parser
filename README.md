@@ -10,7 +10,7 @@ reports for both types per app.
 The types of rows extracted from the logs are for installed apps,  
 moved containers, made live containers and destroyed containers.
 
-Usage:
+Usage:  
 0) Python 3.6.4 or newer.  
 1) Put the script in the same directory as the extracted mobile_installation.log.* files.
 2) Run the script.  
