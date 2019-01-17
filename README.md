@@ -19,3 +19,9 @@ Usage:
 5) Script will produce two directories named Apps_Historical and Apps_State. Apps_Historical contains text files per app with coresponding app entries. App_State contains two text files, one for installed apps and another for uninstalled apps.
 
 In order to run the script again the script generated directories and SQLite db files need to be deleted or moved out of the running directory.  
+
+Update on 1/17/2019  
+Added:  
+- Uninstall identifier events  
+- Attempting delta patch events with version numbers  
+- System reboot events  
