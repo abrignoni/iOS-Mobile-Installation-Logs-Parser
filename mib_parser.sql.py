@@ -387,7 +387,7 @@ for row in all_rows:
 
 #Query to create system events
 			
-cursor.execute('''SELECT * from dimm where action ='Reboot detected' ''')
+cursor.execute('''SELECT * from dimm where action ='Reboot detected' order by time_stamp DESC''')
 all_rows = cursor.fetchall()
 for row in all_rows:
 	#print(row[0])
