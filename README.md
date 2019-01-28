@@ -1,18 +1,18 @@
-# iOS-Mobile-Installation-Logs-Parser 
+# iOS-Mobile-Installation-Logs-Parser
 
 ![alt text](/images/mib_done.PNG "Usage example")
 
 Script parses all the logs in the /private/var/installd/Library/Logs/MobileInstalation/*.log*
 
 Script will produce a currently installed apps report, a uninstalled apps report and historical  
-reports for both types per app. 
+reports for both types per app.
 
 The types of rows extracted from the logs are for installed apps,  
 moved containers, made live containers and destroyed containers.
 
 Usage:  
-  
-1) Python 3.6.4 or newer.
+
+1) Python 3.5.6 or newer.
 2) Put the script in the same directory as the extracted mobile_installation.log.* files.
 3) Run the script.  
 4) Script will produce a SQLite database named mib.db.
