@@ -11,7 +11,7 @@ def month_converter(month):
 	months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 	month = months.index(month) + 1
 	if (month < 10):
-		month = f"{month:02d}"
+		month = "{:02d}".format(month)
 	return month
 
 #Day with leading zero if day < 10 function
@@ -19,7 +19,7 @@ def month_converter(month):
 def day_converter(day):	
 	day = int(day)
 	if (day < 10):
-		day = f"{day:02d}"
+		day = "{:02d}".format(day)
 	return day
 
 #Create sqlite databases
