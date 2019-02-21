@@ -43,11 +43,11 @@ db.commit()
 
 #Search for Installed applications
 #for filename in glob.glob('*.log*'):
-#file = open('mobile_installation.log.1', 'r')
+#file = open('mobile_installation.log.1', 'r', encoding="utf8")
 
 
 for filename in glob.glob('*.log.*'):
-	file = open(filename, 'r')
+	file = open(filename, 'r', encoding='utf8' )
 	filescounter = filescounter + 1
 	for line in file:
 		counter = counter+1
@@ -316,9 +316,9 @@ os.makedirs("./Apps_Historical/")
 os.makedirs("./System_State/")
 
 #Initialize text file reports for installed and unistalled apps
-f1=open('./Apps_State/UninstalledApps.txt', 'w+')
-f2=open('./Apps_State/InstalledApps.txt', 'w+')
-f4=open('./System_State/SystemState.txt', 'w+')
+f1=open('./Apps_State/UninstalledApps.txt', 'w+', encoding="utf8")
+f2=open('./Apps_State/InstalledApps.txt', 'w+', encoding="utf8")
+f4=open('./System_State/SystemState.txt', 'w+', encoding="utf8")
 
 
 #Initialize database connection
@@ -375,7 +375,7 @@ for row in all_rows:
 	if row[0] == '':
 		continue
 	else:
-		f3=open('./Apps_Historical/' + distinctbundle + '.txt', 'w+') #Create historical app report per app
+		f3=open('./Apps_Historical/' + distinctbundle + '.txt', 'w+', encoding="utf8") #Create historical app report per app
 		cursor.execute('''SELECT * from dimm where bundle_id=? order by time_stamp DESC''', (distinctbundle,)) #Query to create app history per bundle_id
 		all_rows_hist = cursor.fetchall()
 		for row in all_rows_hist:
