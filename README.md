@@ -25,3 +25,7 @@ Added:
 - Uninstall identifier events  
 - Attempting delta patch events with version numbers  
 - System reboot events  
+
+Update 11/30/2019  
+Added:  
+- GUI version. Requires pip install easygui
