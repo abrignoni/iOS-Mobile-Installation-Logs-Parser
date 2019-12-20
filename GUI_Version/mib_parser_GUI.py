@@ -1,6 +1,8 @@
 #Script to extract to process the mobile instalation logs. Normalize output and import to sqlite database for report generation.
 import sys, os, re, sqlite3, glob
 import easygui as gui
+from pathlib import Path
+
 #initialize counters
 counter = 0
 filescounter = 0
@@ -60,7 +62,7 @@ db.commit()
 input_path = gui.diropenbox()
 if input_path is None:
 	exit()
-for filename in glob.glob(input_path+'/*.log.*'):
+for filename in Path(input_path).rglob('mobile_installation.log.*'):
 	file = open(filename, 'r', encoding='utf8' )
 	filescounter = filescounter + 1
 	for line in file:
