@@ -52,6 +52,7 @@ for filename in glob.glob('*.log.*'):
 	for line in file:
 		counter = counter+1
 		matchObj = re.search( r"(Install Successful for)", line) #Regex for installed applications
+		''' Old code
 		if matchObj:
 			actiondesc = "Install successful"
 			#print(actiondesc)
@@ -59,7 +60,21 @@ for filename in glob.glob('*.log.*'):
 			if matchObj:
 				bundleid = matchObj.group(1)
 				#print ("Bundle ID: ", bundleid )
-		
+		'''
+		if matchObj:
+			actiondesc = "Install successful"
+			matchObj1 = re.search( r"(?<= for \(Placeholder:)(.*)(?=\))", line) #Regex for bundle id
+			matchObj2 = re.search( r"(?<= for \(Customer:)(.*)(?=\))", line) #Regex for bundle id	
+			matchObj3 = re.search( r"(?<= for \(System:)(.*)(?=\))", line) #Regex for bundle id	
+			matchObj4 = re.search( r"(?<= for \()(.*)(?=\))", line) #Regex for bundle id			
+			if matchObj1:
+				bundleid = matchObj1.group(1)
+			elif matchObj2:
+				bundleid = matchObj2.group(1)
+			elif matchObj3:
+				bundleid = matchObj3.group(1)
+			elif matchObj4:
+				bundleid = matchObj4.group(1)
 			matchObj = re.search( r"(?<=^)(.*)(?= \[)", line) #Regex for timestamp
 			if matchObj:
 				timestamp = matchObj.group(1)
