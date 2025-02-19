@@ -1,3 +1,6 @@
+Note: This parser has been deprecated in favor of iLEAPP.
+Donwload iLEAPP in order to support the mobile installation logs artifact.
+
 # iOS-Mobile-Installation-Logs-Parser 
 
 ![alt text](/images/mib_done.PNG "Usage example")
